@@ -1,16 +1,6 @@
 <?php 
-//Koneksi database
-$conn = mysqli_connect('localhost' ,'root' ,'' ,'mahasiswa');
-//Query isi tabel mahasiswa
-$result = mysqli_query($conn ,"SELECT * FROM mhs");
-// ubah ke array
-$rows = [];
-
-while($row = mysqli_fetch_assoc($result)){
-  $rows[] = $row;
-}
-//tampung ke variable mahasiswa
-$mahasiswa = $rows;
+require 'functions.php';
+$mahasiswa = query("SELECT * FROM mhs");
 
 ?>
 
@@ -29,9 +19,6 @@ $mahasiswa = $rows;
           <th>#</th>
           <th>Gambar</th>
           <th>NAMA</th>
-          <th>NIM</th>
-          <th>Email</th>
-          <th>Jurusan</th>
           <th>aksi</th>
         </tr>
        
@@ -40,10 +27,7 @@ $mahasiswa = $rows;
           <td><?= $i++; ?></td>
           <td><img src="img/<?= $mhs['gambar']; ?>" width="100px" height="100px"></td>
           <td><?= $mhs['nama']; ?></td>
-          <td><?= $mhs['NIM']; ?></td>
-          <td><?= $mhs['email']; ?></td>
-          <td><?= $mhs['jurusan']; ?></td>
-          <td><a href="">Ubah</a> | <a href="">Hapus</a></td>
+          <td><a href="detail.php?id=<?= $mhs['id']; ?>">Lihat Detail</a></td>
         </tr>
        <?php endforeach; ?> 
 
