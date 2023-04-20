@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 20, 2023 at 03:08 PM
+-- Generation Time: Apr 20, 2023 at 03:37 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -35,6 +35,15 @@ CREATE TABLE `mhs` (
   `jurusan` varchar(255) NOT NULL,
   `gambar` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `mhs`
+--
+
+INSERT INTO `mhs` (`id`, `nama`, `NIM`, `email`, `jurusan`, `gambar`) VALUES
+(1, 'Rearizth Muhammad Daffaa', 'A22100146', 'Rearizth@gmail.com', 'Teknik Informatika', 'Rearizth.jpeg'),
+(2, 'Maguire', 'A2131321', 'maguire@gmail.com', 'Teknik informatika', 'maguire.jpg'),
+(3, 'halland', '', 'halland@gmail.com', 'teknik informatika', 'halland.jpg');
 
 --
 -- Indexes for dumped tables
