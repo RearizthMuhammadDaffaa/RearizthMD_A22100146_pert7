@@ -23,4 +23,22 @@ function query($query){
   return $rows;
 }
 
+function tambah($data){
+
+  $nama = htmlspecialchars($data['nama']);
+  $NIM = htmlspecialchars($data['NIM']); 
+  $email = htmlspecialchars($data['email']);
+  $jurusan = htmlspecialchars($data['jurusan']);
+  $gambar = htmlspecialchars($data['gambar']);
+  
+  $conn = koneksi();
+  $query = "INSERT INTO mhs
+  VALUES
+  (null ,'$nama','$NIM','$email','$$jurusan','$gambar')";
+
+  mysqli_query($conn ,$query);
+  echo mysqli_error($conn);
+  return mysqli_affected_rows($conn);
+}
+
 ?>
