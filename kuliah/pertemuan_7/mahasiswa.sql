@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 20, 2023 at 03:08 PM
+-- Generation Time: Apr 23, 2023 at 01:35 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -37,6 +37,16 @@ CREATE TABLE `mhs` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Dumping data for table `mhs`
+--
+
+INSERT INTO `mhs` (`id`, `nama`, `NIM`, `email`, `jurusan`, `gambar`) VALUES
+(1, 'Rearizth Muhammad Daffaa', 'A22100146', 'Rearizth@gmail.com', 'Teknik Informatika', 'Rearizth.jpeg'),
+(2, 'Maguire', 'A2131321', 'maguire@gmail.com', 'Teknik informatika', 'maguire.jpg'),
+(3, 'halland', 'A313213', 'halland@gmail.com', 'teknik informatika', 'halland.jpg'),
+(9, 'de gea', 'aswea', 'degea@gmail.com', '$teknik informatika', 'degea.jpg');
+
+--
 -- Indexes for dumped tables
 --
 
@@ -45,6 +55,16 @@ CREATE TABLE `mhs` (
 --
 ALTER TABLE `mhs`
   ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `mhs`
+--
+ALTER TABLE `mhs`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -39,4 +39,8 @@ $mahasiswa = query("SELECT * FROM mhs");
 
     </table>
 </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> 3a8e8fe5809a4c0b9f10f3abd1f47e1aac7c173b
