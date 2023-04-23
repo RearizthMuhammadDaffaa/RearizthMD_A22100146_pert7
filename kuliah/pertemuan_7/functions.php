@@ -29,12 +29,12 @@ function tambah($data){
   $NIM = htmlspecialchars($data['NIM']); 
   $email = htmlspecialchars($data['email']);
   $jurusan = htmlspecialchars($data['jurusan']);
-  $gambar = htmlspecialchars($data['gambar']);
+  $Gambar = htmlspecialchars($data['gambar']);
   
   $conn = koneksi();
   $query = "INSERT INTO mhs
   VALUES
-  (null ,'$nama','$NIM','$email','$$jurusan','$gambar')";
+  (null ,'$nama','$NIM','$email','$$jurusan','$Gambar')";
 
   mysqli_query($conn ,$query);
   echo mysqli_error($conn);

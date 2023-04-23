@@ -5,7 +5,7 @@ require 'functions.php';
 $id = $_GET['id'];
 
 //query mahasiswa berdasarkan id
-$mahasiswa = query("SELECT * FROM mhs WHERE id = $id");
+$mhs = query("SELECT * FROM mhs WHERE id = $id");
 
 ?>
 
@@ -20,11 +20,11 @@ $mahasiswa = query("SELECT * FROM mhs WHERE id = $id");
 <body>
     <h3>Detail Mahasiswa</h3>
     <ul>
-      <li><img src="img/<?= $mahasiswa['gambar']; ?>" width="200px" height="200px"></li>
-      <li>NIM : <?= $mahasiswa['NIM']; ?></li>
-      <li>Nama: <?= $mahasiswa['nama']; ?></li>
-      <li>Jurusan: <?= $mahasiswa['jurusan']; ?></li>
-      <li>Email: <?= $mahasiswa['email']; ?></li>
+      <li><img src="img/<?= $mhs['gambar']; ?>" width="200px" height="200px"></li>
+      <li>NIM : <?= $mhs['NIM']; ?></li>
+      <li>Nama: <?= $mhs['nama']; ?></li>
+      <li>Jurusan: <?= $mhs['jurusan']; ?></li>
+      <li>Email: <?= $mhs['email']; ?></li>
       <li><a href="">ubah </a> | <a href="">Hapus</a></li>
       <li><a href="latihan3.php">Back</a></li>
     </ul>
