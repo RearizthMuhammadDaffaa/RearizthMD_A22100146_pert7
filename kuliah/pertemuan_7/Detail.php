@@ -6,7 +6,6 @@ $id = $_GET['id'];
 
 //query mahasiswa berdasarkan id
 $mhs = query("SELECT * FROM mhs WHERE id = $id");
-
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +25,7 @@ $mhs = query("SELECT * FROM mhs WHERE id = $id");
       <li>Jurusan: <?= $mhs['jurusan']; ?></li>
       <li>Email: <?= $mhs['email']; ?></li>
       <li><a href="">ubah </a> | <a href="">Hapus</a></li>
-      <li><a href="latihan3.php">Back</a></li>
+      <li><a href="latihan_3.php">Back</a></li>
     </ul>
 </body>
 </html>
